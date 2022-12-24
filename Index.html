@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Você é gay?</h1>
+    <button class="btn-sim">Sim</button>
+    <button class="btn-nao">Não</button>
+    <script>
+        var btnSim = document.querySelector('.btn-sim');
+        var btnNao = document.querySelector('.btn-nao');
+        var position;
+
+        btnNao.addEventListener('mouseover', function(){
+            position ? (position = 0) : (position = 150);
+            btnNao.style.transform = `translate(${position}px,0px)`;
+            btnNao.style.tramsition = 'all 0.3s ease'
+        });
+
+        btnSim.addEventListener('click', function(){
+            alert('Já sabia!')
+        });
+
+    </script>
+</body>
+</html>
